@@ -1,0 +1,14 @@
+{% extends 'layouts.html' %}
+
+{% block content %}
+
+    <h2>Home Page</h2>
+
+    {% for data_profile in home_profile %}
+        <h3>{{ data_profile.name  }}</h3>
+        <h3>{{ data_profile.lastname  }}</h3>
+        <p>{{ data_profile.description  }}</p>
+    {% endfor %}
+
+
+{% endblock %}
