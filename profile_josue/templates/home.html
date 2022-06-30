@@ -1,14 +1,15 @@
 {% extends 'layouts.html' %}
 
 {% block content %}
-
-    <h2>Home Page</h2>
-
-    {% for data_profile in home_profile %}
-        <h3>{{ data_profile.name  }}</h3>
-        <h3>{{ data_profile.lastname  }}</h3>
-        <p>{{ data_profile.description  }}</p>
-    {% endfor %}
-
-
+     <!-- Header - set the background image for the header in the line below-->
+    <main role="main" class="inner cover col-auto p-5 text-center text-light">
+        {% for data_profile in home_profile %}
+            <img class="rounded-circle mb-4 h-100" src="https://dummyimage.com/150x150/6c757d/dee2e6.jpg" alt="..." />
+            <h1 class="cover-heading">{{ data_profile.name  }} {{ data_profile.lastname  }}</h1>
+            <p class="lead">{{ data_profile.description  }}</p>
+            <p class="lead">
+              <a href="{% url 'profile_josue:profile' %}" class="btn btn-lg btn-secondary">About</a>
+            </p>
+        {% endfor %}
+      </main>
 {% endblock %}
