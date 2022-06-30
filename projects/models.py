@@ -6,3 +6,6 @@ class Project(models.Model):
     description = models.TextField()
     created = models.DateField()
 
+    def __str__(self):
+        return self.title
+
